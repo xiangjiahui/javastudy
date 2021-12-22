@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p><span id="time">5</span>秒之后,自动跳转到首页...</p>
+</body>
+<script>
+    var time = document.getElementById("time");
+    var second = 5;
+    setInterval(function () {
+        second --;
+        if(second === 0){
+            location.href = "http://www.itcast.cn";
+        }
+        time.innerHTML = second +"";
+    },1000);
+</script>
+</html>

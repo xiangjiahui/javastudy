@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灯泡开关案例</title>
+</head>
+<body>
+<img id="light" src="../image/off.jpeg" onclick="on()">
+</body>
+<script>
+    var light = document.getElementById("light");
+    var flag = false;
+    function on(){
+        if(flag){
+            //如果灯是开的则灭掉
+            light.src = "../image/off.jpeg";
+            flag = false;
+        }else {
+            //如果登是灭的则打开
+            light.src = "../image/on.jpeg"
+            flag = true;
+        }
+    }
+</script>
+</html>

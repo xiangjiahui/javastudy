@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+    form:用于定义表单的。可以定义一个范围，范围代表采集用户数据的范围
+        属性：
+            action：指定提交数据的URL
+            method：指定提交方式
+                分类：一共7中，2种比较常用
+                    get：
+                        1.请求参数会在地址栏中显示。会封装到请求行中(地址栏就是搜索框)
+                        2.请求参数大小是由限制的
+                        3.不太安全
+                   post：
+                        1.请求参数不会在地址栏中显示。会封装在请求体中
+                        2.请求参数的大小没有限制
+                        3.较为安全
+   表单中的数据想要被提交，必须指定其name属性
+-->
+<!--  placeholder指定输入框的提示信息  -->
+<!-- radio单选框:1.想要实现单选效果，name属性值必须一样。
+                2.一般都要提供value值，指定其被选中后提交的值。
+                3.checked属性，可以指定默认值
+-->
+<!-- checked复选框：1.一般会给每一个单选框提供value值，指定其被选中后提交的值
+                   2.checked属性，可以指定默认值
+-->
+<!-- label标签:指定输入项的文字描述信息
+        注意:label的for属性一般会和input的id属性对应，点击label区域会让input输入框获取焦点
+-->
+<!--file:文件选择框
+    hidden:隐藏域，用于提交一些信息
+    按钮:submit:提交按钮。可以提交表单
+        button:普通按钮
+        image:图片【提交】按钮。src指定图片路径
+-->
+<form action="#" method="get">
+    <label for="1">
+        用户名:<input id="1" type="text" name="username" placeholder="请输入用户名..."><br>
+    </label>
+    <label for="2">
+        密码:<input id="2" type="password" name="password" placeholder="请输入密码..."><br>
+    </label>
+    性别:<input type="radio" name="sex" value="male" checked="checked"> 男
+         <input type="radio" name="sex" value="female"> 女
+    <br>
+    爱好:<input type="checkbox" name="hobby" value="game" checked="checked"> 游戏
+         <input type="checkbox" name="hobby" value> 逛街
+    <br>
+    图片:<input type="file" name="image"><br>
+    隐藏域:<input type="hidden" name="id" value="aaa"><br>
+    取色器:<input type="color" name="color"><br>
+    日期:<input type="date" name="date"><br>
+    详细日期:<input type="datetime-local" name="datetime"><br>
+    邮箱:<input type="email" name="email"><br><!-- 邮箱类型的输入框，会做一个正则运算 -->
+    年龄:<input type="number" name="age"><br><!-- number只能输入数字类型的值 -->
+    省份:<select name="province">
+            <option value="">--请选择--</option>
+            <option value="1" selected>北京</option><!-- selected 默认选择 -->
+            <option value="2">上海</option>
+        </select>
+    <br>
+    自我介绍:<br>
+    <textarea rows="5" cols="20">这里是文本域的提示内容</textarea><br>
+    <input type="submit" value="登陆">
+    <input type="button" value="一个普通按钮"><br>
+    <input type="image" src="../image/5.png">
+</form>
+</body>
+</html>

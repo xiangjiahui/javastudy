@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json数据语法</title>
+</head>
+<body>
+</body>
+<script>
+    //1.基本的定义格式
+    //引号可加可不加
+    var p = {name:"张三",age:23,gender:"男"};
+
+    //获取json对象中的值方法1:json对象.键名
+    //获取json对象中的值方法2:json对象["键名"]
+    var name = p.name;
+    var age = p["age"];
+    // alert(name);
+    // alert(age);
+
+    //2.嵌套格式
+    //{}里面嵌套[](数组)。其实就是一个键对有多个值
+    var ps = {
+        persons:[
+            {name:"张三",age:23,gender:"男",answer:true},
+            {name:"张三",age:23,gender:"男",answer:false},
+            {name:"张三",age:23,gender:"男",answer: true}
+            ]
+    };
+
+    var person = ps.persons[1].name;
+    // alert(person);
+
+
+    //3.嵌套格式2
+    //[](数组)中嵌套{}
+    var persons = [
+        {name:"张三",age:23,gender:"男",answer:true},
+        {name:"张三",age:23,gender:"男",answer:true},
+        {name:"张三",age:23,gender:"男",answer:true}
+        ];
+
+    //获取数组对象:数组对象[索引]
+    var name1 = persons[1].name;
+    // alert(name1);
+</script>
+</html>

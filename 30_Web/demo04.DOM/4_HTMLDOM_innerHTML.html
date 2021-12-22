@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLDOM</title>
+</head>
+<body>
+<div id="div">
+    div
+</div>
+</body>
+<script>
+    /*
+    HTML DOM
+        1.标签体的设置和获取:innerHTML
+        2.使用html元素对象的属性
+        3.控制元素样式
+     */
+    var div = document.getElementById("div");
+    // div.innerHTML = "<input type='text'>";
+    //可追加
+    div.innerHTML += "<input type='text'>";
+</script>
+</html>

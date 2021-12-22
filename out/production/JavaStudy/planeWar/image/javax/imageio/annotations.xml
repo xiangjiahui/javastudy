@@ -1,0 +1,5 @@
+<root>
+    <item name='javax.imageio.ImageIO java.awt.image.BufferedImage read(java.net.URL) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

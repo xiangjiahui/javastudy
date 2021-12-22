@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-JQuery实现Ajax方式2-get</title>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun();">
+<input type="text">
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    function fun(){
+        $.get("ajaxServlet",{username:"rose",age:18},function (data){
+            alert(data);
+        },"text");
+    }
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件的演示</title>
+
+</head>
+<body>
+<form id="form" action="#" onclick="return checkForm();">
+    <label for="username">
+
+    </label>
+    <input type="text" id="username" name="uname" onblur="lost()">
+    <label for="sel"></label>
+    <select id="sel">
+        <option>--请选择--</option>
+        <option>北京</option>
+        <option>上海</option>
+    </select>
+    <input type="submit" value="提交">
+</form>
+</body>
+<script>
+    window.onload = function (){
+        //alert("页面加载完成了。。。")
+    }
+
+    //onblur：元素失去焦点(一般用于表单验证)
+    document.getElementById("username").onblur = function (){
+        //alert("失去焦点了。。。。");
+    }
+    //onmouseover：鼠标被移到某元素之上
+    document.getElementById("username").onmouseover = function (){
+        //alert("鼠标来了。。。");
+    }
+    //onmousedown:某个鼠标按键被按下
+    document.getElementById("username").onmousedown = function (event){
+        // var button = event.button;
+        // if(button === 0){
+        //     alert("点击了鼠标左键");
+        // }
+        // if(button === 1){
+        //     alert("点击了鼠标滑轮");
+        // }
+        // if(button === 2){
+        //     alert("点击了鼠标右键");
+        // }
+    }
+    //onkeydown:某个键盘的键被按下
+    document.getElementById("username").onkeydown = function (event) {
+        // alert(event.keyCode);//显示ASCII码值
+        //alert(event.key);//直接显示键盘按了哪个键
+    }
+
+    document.getElementById("sel").onchange = function () {
+        // alert("省份改变了。。。。");
+    }
+
+    //第一种阻止表单提交方式
+    // document.getElementById("form").onsubmit = function () {
+    //     var flag = false;
+    //     return flag;
+    // }
+
+    //第二种阻止表单提交方式
+    function checkForm(){
+        return false;
+    }
+</script>
+</html>

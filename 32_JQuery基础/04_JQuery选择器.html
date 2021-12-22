@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery选择器</title>
+</head>
+<body>
+<!--
+层级选择器：
+    后代选择器:  $("A B"):选择A元素内部内的所有B元素,包括子辈和孙子辈
+    子选择器:   $("A > B"):选择A元素内部的所有B子元素,只有子辈
+属性选择器：
+    1.属性名称选择器: $("A[属性名]") 包含指定属性的选择器   $("div[title]")
+    2.属性选择器: $("A[属性名='属性值']") 包含指定属性等于指定值的选择器   $("div[title='test']")
+        * $("div[title != 'test']")   选择div中title属性不等于test的元素
+        * $("div[title ^= 'te']")   选择div中title属性以te开始的元素
+        * $("div[title $= 'te']")   选择div中title属性以te结束的元素
+        * $("div[title *= 'te']")   选择div中title属性包含te的元素
+    3.复合属性选择器: $("A[属性名='属性值1'][属性名='属性值2']....") 包含多个属性条件的选择器  $("div[title=''][id]")
+过滤选择器:
+    1.首元素选择器:   :first  获得选择的元素中的第一个元素  $("div: first")
+    2.尾元素选择器:   :last   获取选择的元素中的最后一个元素  $("div: last")
+    3.非元素选贼强:   :not(selector)  不包含指定内容的元素  $("div:not(.one)") 选取div中class不为one的元素
+    4.偶数选择器:    :even 偶数, 从0开始计数  $("div:even") 选取索引为偶数的div
+    5.奇数选择器:    :odd 奇数,  从0开始计数  $("div:odd")  选取索引为奇数的div
+    6.等于索引选择器: :eq(index)  指定索引元素  $("div:eq(3)") 选取div索引等于3的元素
+    7.大于索引选择器: :gt(index)  大于指定索引  $("div:gt(3)")
+    8.小于索引选择器: :lt(index)  小于指定索引  $("div:lt(3)")
+    9.标题选择器:    :header  获得标题元素,固定写法  $(":header")  选取所有的标题元素
+表单过滤选择器
+    1.可用元素选择器       :   :enabled————获得可用元素
+        $("input[type='text']:enabled").val("aaa") 改变表单内可选中框的内容为aaa
+    2.不可用元素选择器     :   :disabled————获得不可用元素
+        $("input[type='text']:disabled").val("aaa") 改变表单内不可选中框的内容为aaa
+    3.选中选择器          :   :checked————获得单选/复选框选中的元素
+        $("input[type='checkbox']:checked").length 获取复选框选中的个数
+    4.选中选择器         :    :selected————获得下拉框选中的元素
+        $("#job > option:selected").length————获得下拉框选中的个数
+-->
+</body>
+</html>

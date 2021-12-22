@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+<input type="button" value="刷新页面" id="flush" onclick="flush()">
+<input type="button" value="跳转页面" id="go" onclick="go()">
+</body>
+<script>
+    //reload方法,刷新页面
+    document.getElementById("flush");
+    function flush(){
+        location.reload();
+    }
+
+    //获取href
+    var href = location.href;
+    document.write("<br>");
+    document.write(href);
+
+    //设置href
+    document.getElementById("go");
+    function go(){
+        location.href = "http://www.itcast.cn";
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery绑定事件和入口函数和样式控制</title>
+</head>
+<body>
+<div id="div1">div1.....</div>
+<div id="div2">div2.....</div>
+<input type="button" id="bt1" value="按钮"/>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    /*
+    window.onload值可以定义一次
+    $(function(){})可以定义多次
+     */
+    $(function () {  //相当于js中的onload,即JQuery的入口函数
+        $("#bt1").click(function () {
+            alert("你好");
+        });
+        $("#div1").css("backgroundColor", "pink");
+    });
+
+</script>
+</html>

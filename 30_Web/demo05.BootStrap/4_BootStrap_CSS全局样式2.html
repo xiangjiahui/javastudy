@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS全局样式</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        caption{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-bordered table-hover table-condensed">
+    <caption>学生信息表</caption>
+    <tr class="active">
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>成绩</th>
+    </tr>
+    <tr class="success">
+        <td>1</td>
+        <td>小龙女</td>
+        <td>女</td>
+        <td>100</td>
+    </tr>
+    <tr class="info">
+        <td>2</td>
+        <td>杨过</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr class="danger">
+        <td>3</td>
+        <td>金轮法王</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr class="warning">
+        <td>4</td>
+        <td>金轮法王</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+</table>
+<hr>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+    <caption>学生信息表</caption>
+    <tr>
+        <th class="active">编号</th>
+        <th class="success">姓名</th>
+        <th class="info">性别</th>
+        <th class="danger">成绩</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td class="warning">小龙女</td>
+        <td>女</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>杨过</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>金轮法王</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>金轮法王</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    </table>
+</div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

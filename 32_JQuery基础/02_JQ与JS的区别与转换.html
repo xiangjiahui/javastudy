@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ与JS的区别与转换</title>
+</head>
+<body>
+<div id="div1">div1.....</div>
+<div id="div2">div2.....</div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    /*
+        1.Jquery对象在操作时，更加方便
+        2.Jquery对象和js对象方法不通用
+        3.两者互相转换
+            * jq --> js:jq对象[索引] 或者jq对象.get(索引)
+            * js --> jq:$(js对象)
+     */
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+        // divs[i].innerHTML = "aaa";
+        // $(divs[i]).html("ccc");
+        $(divs).html("ccc");//与上面的方法是一致性的，可不加索引
+    }
+
+    var $divs = $("div");
+    // $divs.html("bbb");
+    $divs[0].innerHTML = "ddd";
+    $divs.get(1).innerHTML = "eee";
+
+</script>
+</html>

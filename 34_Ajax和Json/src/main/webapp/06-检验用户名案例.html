@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册页面</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <form action="/registerServlet">
+        <input type="text" id="username" name="username" placeholder="请输入用户名">
+        <span id="s_name"></span>
+        <br>
+        <input type="password" name="password" placeholder="请输入密码"><br>
+        <input type="submit" value="注册">
+    </form>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    //绑定失焦事件
+    $("#username").blur(function (){
+        //获取输入框的值
+        var username = $(this).val();
+        //发送ajax请求
+        $.get("registerServlet",{username:username},function (data){
+            //判断用户名是否存在
+            //判断userExsit键的值是否存在
+            var span = $("#s_name");
+            if (data.userExsit){
+                //用户名存在
+                span.css("color","red");
+                span.html(data.msg);
+            }else {
+                //用户名不存在
+                span.addClass("glyphicon glyphicon-ok-sign");
+                span.addClass("aria-hidden=\"true\"")
+                span.css("color","green");
+                // span.css("color","green");
+                // span.html(data.msg);
+            }
+        },"json");
+    });
+
+</script>
+</html>

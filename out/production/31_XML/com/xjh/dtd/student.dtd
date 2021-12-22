@@ -1,0 +1,7 @@
+<!ELEMENT students (student*) ><!--*与正则表达式相同，代表出现0次或多次。定义根标签-->
+<!ELEMENT student (name,age,sex)><!--根标签下的子标签-->
+<!ELEMENT name (#PCDATA)><!--#PCDATA是数据类型-->
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ATTLIST student number ID #REQUIRED>
+<!ATTLIST name id>

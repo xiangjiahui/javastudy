@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../32_JavaEE" />
+    <file type="web" url="file://$PROJECT_DIR$/../demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../JavaEE" />
+    <file type="web" url="file://$PROJECT_DIR$/../LoginTest" />
+    <file type="web" url="file://$PROJECT_DIR$/34_Ajax和Json" />
+    <file type="web" url="file://$PROJECT_DIR$/35redis" />
+    <file type="web" url="file://$PROJECT_DIR$/Login" />
+    <file type="web" url="file://$PROJECT_DIR$/travel" />
+    <file type="web" url="file://$PROJECT_DIR$/../travel" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../JavaEE/pom.xml" />
+        <option value="$PROJECT_DIR$/../LoginTest/pom.xml" />
+        <option value="$PROJECT_DIR$/Login/pom.xml" />
+        <option value="$PROJECT_DIR$/34_Ajax和Json/pom.xml" />
+        <option value="$PROJECT_DIR$/35redis/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="15" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

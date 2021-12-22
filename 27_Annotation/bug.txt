@@ -1,0 +1,5 @@
+division方法出现异常了
+异常的名称ArithmeticException
+异常的原因/ by zero
+-------------------------
+本次测试一共出现了1次异常

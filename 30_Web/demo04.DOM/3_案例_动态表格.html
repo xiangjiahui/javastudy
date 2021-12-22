@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 50px;
+        }
+        #id,#name,#gender{
+            height: 20px;
+            border: 2px solid lightskyblue;
+            border-radius: 5px;
+        }
+        #btn_add{
+            height: 25px;
+            margin-left: 50px;
+            background: #ffd026;
+            border-radius: 5px;
+        }
+        table{
+            border: 1px solid;
+            width: 500px;
+            margin-top: 50px;
+            margin-left: 470px;
+            /*margin:auto;*/
+            /*border-collapse:collapse;*/
+        }
+        th,td{
+            border: 1px solid;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name" placeholder="请输入姓名">
+    <input type="text" id="gender" placeholder="请输入性别">
+    <input type="button" id="btn_add" value="添加" onclick="add()">
+</div>
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this)">删除</a></td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this)">删除</a></td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>向问天</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this)">删除</a></td>
+    </tr>
+</table>
+</body>
+<script>
+    function add(){
+        //获取文本框的内容
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+
+        //创建id的td
+        var td_id = document.createElement("td");
+        var text_id = document.createTextNode(id);
+        td_id.appendChild(text_id);
+
+        //创建name的td
+        var td_name = document.createElement("td");
+        var text_name = document.createTextNode(name);
+        td_name.appendChild(text_name);
+
+        //创建gender的id
+        var td_gender = document.createElement("td");
+        var text_gender = document.createTextNode(gender);
+        td_gender.appendChild(text_gender);
+
+        //创建a标签的td
+        var td_a = document.createElement("td");
+        //创建a标签
+        var ele_a = document.createElement("a");
+        //在a标签中创建文本节点
+        var text_a = document.createTextNode("删除");
+        ele_a.setAttribute("href","javascript:void(0);");
+        ele_a.setAttribute("onclick","del(this)");
+        //先将文本添加到a标签中
+        ele_a.appendChild(text_a);
+        //再将a标签添加到td标签中
+        td_a.appendChild(ele_a);
+
+        //创建tr
+        var tr = document.createElement("tr");
+
+        //将td添加到tr中
+        tr.appendChild(td_id);
+        tr.appendChild(td_name);
+        tr.appendChild(td_gender);
+        tr.appendChild(td_a);
+
+        //获取table标签
+        var table = document.getElementsByTagName("table")[0];
+
+        //将tr添加到table中
+        table.appendChild(tr);
+    }
+
+    function del(obj){
+        //通过传递参数来确定点击了哪一个删除
+        //通过三次获取父节点获取到table节点
+        //obj传递的是对象的a节点
+        var table = obj.parentNode.parentNode.parentNode;
+        //两次获取到tr节点
+        var tr = obj.parentNode.parentNode;
+
+        table.removeChild(tr);
+    }
+</script>
+</html>

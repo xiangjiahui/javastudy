@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/29_JDBC_C3P0/src/com/xjh/datasource/druid/Demo02Druid.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Login/src/main/java/com/xjh/dao/impl/UserDaoImpl.java" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>
